@@ -2,60 +2,229 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #1e1e1e;
+    color: #fff;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
+/* HEADER */
 header {
-    position: relative;
-    height: 100vh; /* Full height of the viewport */
-    background-color: #333;
-    color: #fff;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    color: white;
 }
 
 header h1 {
-    font-size: 4em;
-    margin-bottom: 10px;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: fadeInDown 1.2s ease-in-out;
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     gap: 20px;
+    list-style: none;
+    margin-top: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    transition: background-color 0.3s;
 }
 
-section {
-    padding: 30px 0;
+nav ul li a:hover {
+    background-color: #88d3ce;
 }
 
-.about, .projects, .contact {
+/* Scroll down arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.scroll-down a:hover {
+    background-color: white;
+    color: #6e45e2;
+}
+
+/* About Section */
+.about {
+    padding: 100px 20px;
+    background: #222;
     text-align: center;
 }
 
-.projects .project-card {
-    background: #fff;
-    padding: 15px;
+.about h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #88d3ce;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 20px;
+    background: #1e1e1e;
+}
+
+.projects h2 {
+    font-size: 3rem;
+    color: #88d3ce;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #88d3ce;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background: #222;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    color: #88d3ce;
     margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.contact a {
+    color: #88d3ce;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
