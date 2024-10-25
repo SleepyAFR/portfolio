@@ -101,27 +101,27 @@ nav ul li a:hover {
     color: #ccc;
 }
 
-/* Projects Section */
-.projects {
+/* experiences Section */
+.experiences {
     padding: 100px 20px;
     background: #1e1e1e;
 }
 
-.projects h2 {
+.experiences h2 {
     font-size: 3rem;
     color: #88d3ce;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.project-gallery {
+.experience-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
 
-.project-card {
+.experience-card {
     background-color: #333; /* Card background */
     padding: 20px;
     border-radius: 10px;
@@ -130,29 +130,29 @@ nav ul li a:hover {
     width: 300px;
 }
 
-.project-card:hover {
+.experience-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.project-card h3 {
+.experience-card h3 {
     font-size: 1.5rem;
-    color: #88d3ce; /* Heading color for projects */
+    color: #88d3ce; /* Heading color for experiences */
     margin-bottom: 10px;
 }
 
-.project-card p {
+.experience-card p {
     font-size: 1rem;
     color: #fff; /* Change text color to white */
     line-height: 1.5;
 }
 
-.project-card a {
+.experience-card a {
     color: #ffd700; /* Gold color for better visibility */
     text-decoration: underline; /* Optional */
 }
 
-.project-card a:hover {
+.experience-card a:hover {
     color: #fff; /* Change color on hover for better visibility */
 }
 
@@ -237,9 +237,9 @@ footer p {
         flex-direction: column;
     }
 
-    .project-gallery {
+    .experience-gallery {
         flex-direction: column;
-        align-items: center; /* Center align projects on smaller screens */
+        align-items: center; /* Center align experiences on smaller screens */
     }
 	
 	#typing-text {
