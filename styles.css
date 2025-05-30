@@ -101,7 +101,7 @@ nav ul li a:hover {
     color: #ccc;
 }
 
-/* experiences Section */
+/* Experiences Section */
 .experiences {
     padding: 100px 20px;
     background: #1e1e1e;
@@ -114,20 +114,40 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 
+/* Horizontal scrolling experience gallery */
 .experience-gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 30px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling */
+.experience-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.experience-gallery::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 211, 206, 0.7); /* lighter teal */
+    border-radius: 4px;
+}
+
+.experience-gallery::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
 }
 
 .experience-card {
-    background-color: #333;
+    background-color: #333 !important; /* Dark card background */
+    color: #fff; /* White text */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     width: 300px;
+    flex: 0 0 auto; /* Prevent flex shrinking for horizontal scroll */
+    scroll-snap-align: start;
 }
 
 .experience-card:hover {
@@ -137,18 +157,17 @@ nav ul li a:hover {
 
 .experience-card h3 {
     font-size: 1.5rem;
-    color: #88d3ce;
+    color: #88d3ce; /* Heading color */
     margin-bottom: 10px;
 }
 
 .experience-card p {
     font-size: 1rem;
-    color: #fff;
     line-height: 1.5;
 }
 
 .experience-card a {
-    color: #ffd700;
+    color: #ffd700; /* Gold color */
     text-decoration: underline;
 }
 
@@ -239,41 +258,13 @@ footer p {
 
     .experience-gallery {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Center align experiences on smaller screens */
+        overflow-x: visible; /* Remove horizontal scroll on small screens */
     }
 
     #typing-text {
         font-size: 1.5rem;
         color: #88d3ce;
         margin-top: 20px;
-    }
-}
-
-/* Horizontal Scroll for Experience Gallery on Large Screens */
-@media screen and (min-width: 1024px) {
-    .experience-gallery {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 20px;
-    }
-
-    .experience-card {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
-    }
-
-    .experience-gallery::-webkit-scrollbar {
-        height: 8px;
-    }
-
-    .experience-gallery::-webkit-scrollbar-thumb {
-        background-color: #555;
-        border-radius: 4px;
-    }
-
-    .experience-gallery::-webkit-scrollbar-track {
-        background-color: #1e1e1e;
     }
 }
