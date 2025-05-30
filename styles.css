@@ -122,7 +122,7 @@ nav ul li a:hover {
 }
 
 .experience-card {
-    background-color: #333; /* Card background */
+    background-color: #333;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -137,23 +137,23 @@ nav ul li a:hover {
 
 .experience-card h3 {
     font-size: 1.5rem;
-    color: #88d3ce; /* Heading color for experiences */
+    color: #88d3ce;
     margin-bottom: 10px;
 }
 
 .experience-card p {
     font-size: 1rem;
-    color: #fff; /* Change text color to white */
+    color: #fff;
     line-height: 1.5;
 }
 
 .experience-card a {
-    color: #ffd700; /* Gold color for better visibility */
-    text-decoration: underline; /* Optional */
+    color: #ffd700;
+    text-decoration: underline;
 }
 
 .experience-card a:hover {
-    color: #fff; /* Change color on hover for better visibility */
+    color: #fff;
 }
 
 /* Contact Section */
@@ -239,15 +239,41 @@ footer p {
 
     .experience-gallery {
         flex-direction: column;
-        align-items: center; /* Center align experiences on smaller screens */
+        align-items: center;
     }
-	
-	#typing-text {
-    font-size: 1.5rem; /* Adjust the size as desired */
-    color: #88d3ce; /* Set the text color */
-    margin-top: 20px; /* Space between the heading and typing text */
+
+    #typing-text {
+        font-size: 1.5rem;
+        color: #88d3ce;
+        margin-top: 20px;
+    }
 }
 
+/* Horizontal Scroll for Experience Gallery on Large Screens */
+@media screen and (min-width: 1024px) {
+    .experience-gallery {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 20px;
+    }
+
+    .experience-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
+
+    .experience-gallery::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .experience-gallery::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 4px;
+    }
+
+    .experience-gallery::-webkit-scrollbar-track {
+        background-color: #1e1e1e;
+    }
 }
-
-
