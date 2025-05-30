@@ -4,48 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <style>
-        .experience-gallery {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 20px;
-            padding-bottom: 10px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .experience-card {
-            min-width: 300px;
-            flex: 0 0 auto;
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            scroll-snap-align: start;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-        }
-
-        .experience-gallery::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .experience-gallery::-webkit-scrollbar-thumb {
-            background: #ccc;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Asant&#233; Fola-Rose</h1>
-		<h1 id="typing-text"></h1>
-        <p ></p>
+        <h1 id="typing-text"></h1>
         <nav>
             <ul style="text-align: center;">
-				<li><a href="#about">About</a></li>
-				<li><a href="#experiences">Experience</a></li>
-			</ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experiences">Experience</a></li>
+            </ul>
         </nav>
         <div class="scroll-down">
             <a href="#about">Scroll Down</a>
@@ -56,8 +25,8 @@
         <div class="container">
             <h2>About Me</h2>
             <p>I am a passionate computer science graduate with a strong interest in cybersecurity, technology legislation, policies, and emerging technologies. 
-			Always eager to learn, I seek to apply new skills in innovative ways. 
-			I earned my Bachelor’s degree in Computer Science from <b>Virginia State University</b> and, as of August 26, 2024, I am pursuing a Master’s in Computer Science with a focus on Cybersecurity at <b>American University</b>.</p>
+            Always eager to learn, I seek to apply new skills in innovative ways. 
+            I earned my Bachelor’s degree in Computer Science from <b>Virginia State University</b> and, as of August 26, 2024, I am pursuing a Master’s in Computer Science with a focus on Cybersecurity at <b>American University</b>.</p>
         </div>
     </section>
 
@@ -66,48 +35,72 @@
             <h2>Experiences</h2>
             <div class="experience-gallery">
                 <div class="experience-card">
-                <h3>A Review of Facial Recognition Methods</h3>
-                <p>
-				This paper analyzes facial recognition systems, exploring advancements, applications, and ethical challenges. 
-				It discusses the latest developments, benefits for security, and concerns like privacy, bias, and surveillance. 
-				The rise of AI-generated faces and societal impacts, such as deepfakes, are highlighted. 
-				It also covers applications in healthcare, education, and retail, emphasizing the need for regulation, transparency, and responsible use as the technology evolves.
-				</p>
-                <p><a href="https://ieeexplore.ieee.org/document/10703753/authors#authors" target="_blank">View Research Paper</a></p>
-            </div>
+                    <h3>A Review of Facial Recognition Methods</h3>
+                    <div class="experience-card-content">
+                        <p>This paper analyzes facial recognition systems, exploring advancements, applications, and ethical challenges. It discusses the latest developments, benefits for security, and concerns like privacy, bias, and surveillance. The rise of AI-generated faces and societal impacts, such as deepfakes, are highlighted. It also covers applications in healthcare, education, and retail, emphasizing the need for regulation, transparency, and responsible use as the technology evolves.</p>
+                        <p><a href="https://ieeexplore.ieee.org/document/10703753/authors#authors" target="_blank">View Research Paper</a></p>
+                    </div>
+                </div>
                 <div class="experience-card">
                     <h3>Summer Internship at Church & Dwight</h3>
-                    <p>Leveraged advanced website design skills to enhance company operations and user experience. 
-					Utilized R for data forecasting, delivering actionable insights to support decision-making. 
-					Designed and implemented projects that align with company objectives, and developed a customized site integrating OpenAI to meet specific needs. 
-					Created bespoke websites in response to unique requests and completed Microsoft training to gain expertise in leveraging AI technologies for innovative business solutions.</p>
+                    <div class="experience-card-content">
+                        <p>Leveraged advanced website design skills to enhance company operations and user experience. Utilized R for data forecasting, delivering actionable insights to support decision-making. Designed and implemented projects that align with company objectives, and developed a customized site integrating OpenAI to meet specific needs. Created bespoke websites in response to unique requests and completed Microsoft training to gain expertise in leveraging AI technologies for innovative business solutions.</p>
+                    </div>
                 </div>
                 <div class="experience-card">
                     <h3>Budget Bytes University</h3>
-                    <p>
-					This app is a comprehensive resource designed for college students to eat well on a budget with minimal cooking equipment. 
-					It offers a diverse selection of recipes categorized by meal type, dietary preferences, and available cooking appliances. 
-					The app also provides recommendations for affordable, space-saving cookware essentials, helping students efficiently stock their dorm kitchens. 
-					Perfect for those seeking convenience and nutritious meals while managing limited resources.
-					</p>
-					<p><a href ="https://github.com/CollegeCookBook/BBUCode" target="_blank">View Github here</a></p>
+                    <div class="experience-card-content">
+                        <p>This app is a comprehensive resource designed for college students to eat well on a budget with minimal cooking equipment. It offers a diverse selection of recipes categorized by meal type, dietary preferences, and available cooking appliances. The app also provides recommendations for affordable, space-saving cookware essentials, helping students efficiently stock their dorm kitchens. Perfect for those seeking convenience and nutritious meals while managing limited resources.</p>
+                        <p><a href="https://github.com/CollegeCookBook/BBUCode" target="_blank">View Github here</a></p>
+                    </div>
                 </div>
-				<div class="experience-card">
-				    <h3>Cybersecurity Incident Reporting System</h3>
-				    <p>
-				        Developed a comprehensive, database-driven system for efficiently logging, tracking, and managing cybersecurity incidents. 
-				        The system allows users to report incidents, specifying details like description, severity (low, medium, high), and the affected system (e.g., email server, payroll system). 
-				        Admin users can manage and view all incidents, while non-admin users can submit new reports. 
-				        Key features include automated daily and monthly reports, real-time incident trend analysis, and secure audit logging to ensure accountability.
-				    </p>
-				</div>
+                <div class="experience-card">
+                    <h3>Cybersecurity Incident Reporting System</h3>
+                    <div class="experience-card-content">
+                        <p>Developed a comprehensive, database-driven system for efficiently logging, tracking, and managing cybersecurity incidents. The system allows users to report incidents, specifying details like description, severity (low, medium, high), and the affected system (e.g., email server, payroll system). Admin users can manage and view all incidents, while non-admin users can submit new reports. Key features include automated daily and monthly reports, real-time incident trend analysis, and secure audit logging to ensure accountability.</p>
+                    </div>
+                </div>
                 <div class="experience-card">
                     <h3>Resume Parser + Tailoring Tool</h3>
-                    <p>
-                        Built a local web-based application using Streamlit and LLaMA (Mistral 7B) to parse resumes from PDFs into structured JSON. 
-                        It supports resume tailoring to specific job descriptions and exports to polished .docx files. 
-                        The tool prioritizes data privacy by running models locally, and includes a user-friendly interface and download features.
-                    </p>
+                    <div class="experience-card-content">
+                        <p>Built a local web-based application using Streamlit and LLaMA (Mistral 7B) to parse resumes from PDFs into structured JSON. It supports resume tailoring to specific job descriptions and exports to polished .docx files. The tool prioritizes data privacy by running models locally, and includes a user-friendly interface and download features.</p>
+                        <p><a href="https://github.com/yourusername/resume-llama-app" target="_blank">View Project Source Code</a></p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <h3>Character Repository Mobile App</h3>
+                    <div class="experience-card-content">
+                        <p>A mobile app that allows users to store their character information in an easily referencable repository. Useful for artists, authors, game developers, and others creating characters.</p>
+                        <h4>App Evaluation</h4>
+                        <ul>
+                            <li><strong>Category:</strong> Productivity/Entertainment</li>
+                            <li><strong>Mobile:</strong> Easy on-the-go access</li>
+                            <li><strong>Story:</strong> Portable database of characters</li>
+                            <li><strong>Market:</strong> Authors, artists, game developers</li>
+                            <li><strong>Habit:</strong> Supports frequent, integrated use</li>
+                            <li><strong>Scope:</strong> Expandable features (e.g., family trees)</li>
+                        </ul>
+                        <h4>Product Spec</h4>
+                        <p><strong>Required Features:</strong></p>
+                        <ul>
+                            <li>Enter character information ✔️</li>
+                            <li>Create folders ✔️</li>
+                            <li>Store to database ❌</li>
+                            <li>User Profile ✔️</li>
+                            <li>Search Feature ✔️</li>
+                            <li>Share character info ✔️</li>
+                            <li>Nice app design ✔️</li>
+                        </ul>
+                        <p><strong>Stretch Features:</strong></p>
+                        <ul>
+                            <li>Cloud Database</li>
+                            <li>App customization</li>
+                            <li>Comment on characters</li>
+                        </ul>
+                        <h4>Navigation</h4>
+                        <p><strong>Tabs:</strong> Home, Profile, Explore</p>
+                        <p><strong>Screens:</strong> Login, Register, Home, Explore, Profile, Character Creation, Folders, Characters List, Character Detail</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,6 +111,6 @@
             <p>&copy; 2024 Asante Fola-Rose. All rights reserved.</p>
         </div>
     </footer>
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
